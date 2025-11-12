@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Saya</title>
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Font: Clash Display -->
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@300,400,500,600,700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const typingElement = document.getElementById("typingName");
+      const text = "Defasa Maulana Andrianu";
+      let index = 0;
+      let isDeleting = false;
+  
+      function type() {
+        const speed = isDeleting ? 80 : 120; // kecepatan mengetik & menghapus
+        typingElement.textContent = text.substring(0, index);
+  
+        if (!isDeleting && index < text.length) {
+          index++;
+        } else if (isDeleting && index > 0) {
+          index--;
+        } else {
+          // jika selesai mengetik atau menghapus, jeda sebentar
+          isDeleting = !isDeleting;
+          setTimeout(type, 1000);
+          return;
+        }
+  
+        setTimeout(type, speed);
+      }
+  
+      type();
+    });
+  </script>
+  
+<body class="bg-dark text-light">
+
+<!-- NAVBAR ATAS -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm" style="background-color: #161b22;">
+  <div class="container-lg">
+    <a class="navbar-brand fw-semibold" href="#home">
+      Defasa Maulana Andrianu
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <i class="bi bi-list text-light fs-2"></i>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-center gap-2">
+        <li class="nav-item">
+          <a class="nav-link active d-flex align-items-center gap-1" href="#home">
+            <i class="bi bi-house-door"></i> Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center gap-1" href="#about">
+            <i class="bi bi-person"></i> About
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center gap-1" href="#achievement">
+            <i class="bi bi-trophy"></i> Achievement
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center gap-1" href="#project">
+            <i class="bi bi-layers"></i> Project
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center gap-1" href="#contact">
+            <i class="bi bi-envelope"></i> Contact
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- MAIN CONTENT -->
+<main class="main-content">
+    <!-- HOME SECTION -->
+    <section id="home" class="home-section text-light position-relative">
+      <!-- Video Background -->
+      <video autoplay muted loop playsinline class="bg-video">
+        <source src="video/background video 1.mp4" type="video/mp4">
+      </video>
+  
+      <!-- Overlay -->
+      <div class="overlay"></div>
+  
+      <!-- Konten utama -->
+      <div class="container-lg position-relative z-2 py-5">
+        <div class="row align-items-center justify-content-center text-center text-md-start">
+          <!-- KIRI (TEKS PERKENALAN) -->
+          <div class="col-md-6 d-flex flex-column justify-content-center">
+            <h1 class="fw-bold mb-3">
+              Hello, I am <span id="typingName" class="highlight"></span>
+            </h1>
+  
+            <p class="lead text-secondary">
+                I am a <span class="text-light">Front-End Developer</span> focused on modern design, high performance, and smooth user experiences.
+            </p>
+            <p class="text-secondary">
+              I create websites with a minimalist and efficient design approach, using technologies like HTML, CSS, JavaScript, and modern frameworks such as Bootstrap and React.
+            </p>
+  
+            <a href="#project" class="btn btn-primary mt-3 px-4 py-2 fw-semibold align-self-start align-self-md-start mx-auto mx-md-0">
+                View My Projects <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+  
+            <!-- MEDIA SOSIAL -->
+            <div class="social-links mt-4 d-flex justify-content-center justify-content-md-start gap-4">
+              <a href="https://github.com/Depasaa" target="_blank" class="social-link">
+                <i class="bi bi-github"></i>
+              </a>
+              <a href="https://www.instagram.com/depasaa4" target="_blank" class="social-link">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="https://bit.ly/TypeShitCommunity" target="_blank" class="social-link">
+                <i class="bi bi-discord"></i>
+              </a>
+              <a href="https://www.tiktok.com/@depasaa4" target="_blank" class="social-link">
+                <i class="bi bi-tiktok"></i>
+              </a>
+            </div>
+          </div>
+  
+          <!-- KANAN (FOTO PROFIL) -->
+          <div class="col-md-6 text-center mt-5 mt-md-0 d-flex justify-content-center align-items-center">
+            <div class="photo-wrapper mx-auto position-relative">
+              <img src="img/defasafoto.jpg" alt="Foto Profil" class="profile-photo">
+  
+              <!-- Ikon bahasa pemrograman (bergerak acak) -->
+              <div class="floating-icons">
+                <i class="bi bi-filetype-html" title="HTML"></i>
+                <i class="bi bi-filetype-css" title="CSS"></i>
+                <i class="bi bi-filetype-js" title="JavaScript"></i>
+                <i class="bi bi-bootstrap" title="Bootstrap"></i>
+                <i class="bi bi-node-plus" title="Node.js"></i>
+                <i class="bi bi-github" title="GitHub"></i>
+                <i class="bi bi-figma" title="Figma"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+
+ <!-- ABOUT SECTION -->
+<section id="about" class="about-section text-light position-relative">
+    <div class="overlay"></div>
+  
+    <div class="container-lg position-relative z-2 py-5">
+      <div class="row align-items-center justify-content-center text-center text-md-start">
+  
+        <!-- KIRI (3 FOTO PROFIL) -->
+        <div class="col-md-6 text-center mt-4 mt-md-0 d-flex justify-content-center align-items-center">
+            <div class="card-hanging">
+              <img src="img/defasafoto.jpg" alt="Foto Defasa">
+              <div class="name">Defasa Maulana Andrianu</div>
+              <div class="title">Front-End Developer</div>
+            </div>
+          </div>
+          
+  
+        <!-- KANAN (TEKS ABOUT) -->
+        <div class="col-md-6 d-flex flex-column justify-content-center mt-4 mt-md-0">
+          <h2 class="fw-bold mb-3">About <span class="highlight">Me</span></h2>
+          <p class="lead text-secondary">
+            I am a <span class="text-light">Front-End Developer</span> with a strong passion for design and user experience.
+            My focus is on creating websites that are not only visually appealing but also efficient and easy to use.
+          </p>
+          <p class="text-secondary">
+            I believe that every line of code is a form of art — and I strive to deliver a professional touch in every project I work on.
+          </p>
+  
+          <!-- INFORMASI DATA -->
+          <div class="info-box mt-4 p-3 rounded-3">
+            <p class="mb-1"><i class="bi bi-envelope me-2 text-primary"></i> defamaulanaa@gmail.com</p>
+            <p class="mb-0"><i class="bi bi-geo-alt me-2 text-primary"></i> Malang, Indonesia</p>
+          </div>
+  
+          <!-- Tombol -->
+          <a href="#project" class="btn btn-primary mt-4 px-4 py-2 fw-semibold align-self-start align-self-md-start mx-auto mx-md-0">
+            View My Projects <i class="bi bi-arrow-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- ACHIEVEMENT SECTION -->
+   
+<section id="achievement" class="achievement-section text-light position-relative">
+    <div class="overlay"></div>
+  
+<!-- Floating Icons Teknologi -->
+<div class="achievement-floating-icons">
+    <i class="bi bi-atom"></i>
+    <i class="bi bi-bootstrap"></i>
+    <i class="bi bi-filetype-html"></i>
+    <i class="bi bi-filetype-css"></i>
+    <i class="bi bi-filetype-js"></i>
+    <i class="bi bi-github"></i>
+    <i class="bi bi-gear-fill"></i>
+    <i class="bi bi-node-plus"></i>
+    <i class="bi bi-file-earmark-code-fill"></i>
+    <i class="bi bi-hexagon-fill"></i>
+    <i class="bi bi-palette-fill"></i>
+    <i class="bi bi-server"></i>
+    <i class="bi bi-lightning-fill"></i>
+    <i class="bi bi-cpu-fill"></i>
+  </div>
+  
+  
+
+    <div class="container-lg position-relative z-2 py-5">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold"><span class="highlight">My</span> Achievements</h2>
+        <p class="text-secondary">Several things I’ve accomplished so far in my journey as a Front-End Developer.</p>
+      </div>
+  
+      <div class="row justify-content-center g-4">
+        <!-- Card 1 -->
+        <div class="col-md-4">
+          <div class="achievement-card p-4 text-center">
+            <i class="bi bi-award-fill icon mb-3"></i>
+            <h5 class="fw-semibold mb-2">Internship at Illiyin Studio</h5>
+            <p class="text-secondary mb-0">Internship at Illiyin Studio — Front-End Developer (1 Year)
+              During my internship at Illiyin Studio, I worked as a Front-End Developer, responsible for converting UI designs into interactive web interfaces, performing quality assurance (QA), and collaborating closely with the UI/UX and Back-End teams.
+              I contributed to several projects such as Worknook Homepage, Team Member Page, and HotelMurah Email Template, using technologies like HTML, CSS (Tailwind), and Next.js.
+              This experience enhanced my understanding of industry workflows, team-based project development, and best practices in building user interfaces.</p>
+          </div>
+        </div>
+  
+        <!-- Card 2 -->
+        <div class="col-md-4">
+          <div class="achievement-card p-4 text-center">
+            <i class="bi bi-trophy-fill icon mb-3"></i>
+            <h5 class="fw-semibold mb-2">Technology & Artificial Intelligence Seminar — MCC Malang</h5>
+            <p class="text-secondary mb-0">I participated in a seminar held at the Malang Creative Center (MCC), focusing on programming and artificial intelligence (AI) development).
+              Through this event, I learned the fundamentals of applying AI in application development, machine learning concepts, and the use of modern technology for digital innovation.
+              This experience broadened my understanding of current technology trends and the potential of AI across various fields.</p>
+          </div>
+        </div>
+  
+        <!-- Card 3 -->
+        <div class="col-md-4">
+          <div class="achievement-card p-4 text-center">
+            <i class="bi bi-lightning-charge-fill icon mb-3"></i>
+            <h5 class="fw-semibold mb-2">RPL Department Representative — School Technology Exhibition</h5>
+            <p class="text-secondary mb-0">I had the opportunity to represent the Software Engineering (RPL) department at a school technology exhibition.
+              During the event, I was responsible for managing our department’s booth and explaining the projects and works we had developed to visitors, including teachers, students, and guests from outside the school.
+              This experience helped me improve my professional communication skills, present team projects effectively, and introduce the world of programming to a wider audience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+<!-- PROJECT SECTION -->
+<section id="project" class="project-section text-light position-relative">
+    <div class="overlay"></div>
+
+    <div class="container-lg position-relative z-2 py-5">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold"><span class="highlight">My</span> Projects</h2>
+        <p class="text-secondary">Here are some of the projects I’ve worked on, both personal and team collaborations.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+         <!-- Project 1 -->
+         <div class="col-md-4 d-flex">
+          <div class="project-card d-flex flex-column justify-content-between w-100">
+            <div>
+              <img src="img/tajhizulmayitapk.png" alt="Project 1" class="project-img mb-3">
+              <h5 class="fw-semibold mb-2">Tajhizul Mayit (App)</h5>
+              <p class="text-secondary mb-3">This is my first project — an application designed to help users learn and manage the Islamic funeral process.
+                It provides step-by-step guidance, covering everything from washing and shrouding to the funeral prayer and burial.
+                Developed using Flutter for the app and Figma for the user interface design, this project focuses on a clean, user-friendly, and informative experience..</p>
+            </div>
+            <div class="project-links d-flex justify-content-center gap-2 mt-3">
+              <a href="" target="_blank" class="btn btn-sm btn-primary">No Live Site</a>
+              <a href="https://github.com/Depasaa/flutter-apk" target="_blank" class="btn btn-sm btn-outline-primary">GitHub</a>
+            </div>
+          </div>
+        </div>
+          <!-- Project 2 -->
+      <div class="col-md-4 d-flex">
+          <div class="project-card d-flex flex-column justify-content-between w-100">
+            <div>
+              <img src="img/tajhizulmayitwebsite.png" alt="Project 2" class="project-img mb-3">
+              <h5 class="fw-semibold mb-2">Tajhizul Mayit (Website)</h5>
+              <p class="text-secondary mb-3">This project is an extension of the previous application, where I converted it into a website version to make it more accessible through web browsers.
+                The website retains the core concept — a complete guide to the funeral management process, from washing to burial — but with an interface optimized for the web.
+                Built using HTML, CSS, and JavaScript, this project focuses on responsive design and a smooth user experience across different devices.</p>
+            </div>
+            <div class="project-links d-flex justify-content-center gap-2 mt-3">
+              <a href="https://tajhizul-mayit.vercel.app/" target="_blank" class="btn btn-sm btn-primary">Live Site</a>
+              <a href="https://github.com/Depasaa/Tajhizul-Mayit" target="_blank" class="btn btn-sm btn-outline-primary">GitHub</a>
+            </div>
+          </div>
+        </div>
+          <!-- Project 3 -->
+      <div class="col-md-4 d-flex">
+          <div class="project-card d-flex flex-column justify-content-between w-100">
+            <div>
+              <img src="img/fotomemori.png" alt="Project 3" class="project-img mb-3">
+              <h5 class="fw-semibold mb-2">FotoMemori</h5>
+              <p class="text-secondary mb-3">FotoMemori Website is a platform I developed to connect clients with professional photographers.
+                Users can hire photographers for various needs such as events, portraits, or pre-wedding sessions, as well as register as photographers to promote their services to potential clients.
+                The website features a modern design with intuitive navigation, built using HTML, CSS, and PHP, and Bootstrap, providing a responsive and engaging user experience across all devices.</p>
+            </div>
+            <div class="project-links d-flex justify-content-center gap-2 mt-3">
+              <a href="" target="_blank" class="btn btn-sm btn-primary">No Live Site</a>
+              <a href="https://github.com/Depasaa/FotoMemoriTerbaru" target="_blank" class="btn btn-sm btn-outline-primary">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 4 -->
+        <div class="col-md-4 d-flex">
+          <div class="project-card d-flex flex-column justify-content-between w-100">
+            <div>
+              <img src="img/natours.png" alt="Project 4" class="project-img mb-3">
+              <h5 class="fw-semibold mb-2">Natours</h5>
+              <p class="text-secondary mb-3">Natours Project is a nature-themed travel website I developed as a practice project to enhance my skills in modern design and layout.
+                It showcases various tour packages with a clean design, smooth animations, and a focus on delivering an enjoyable and informative user experience.
+                Built using HTML, CSS (Sass), and JavaScript, this project emphasizes responsiveness, modern transitions, and well-structured code organization.</p>
+            </div>
+            <div class="project-links d-flex justify-content-center gap-2 mt-3">
+              <a href="https://natours-defasa.netlify.app/" target="_blank" class="btn btn-sm btn-primary">Live Site</a>
+              <a href="https://github.com/Depasaa/Natours-Defasa" target="_blank" class="btn btn-sm btn-outline-primary">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="col-md-4 d-flex">
+          <div class="project-card d-flex flex-column justify-content-between w-100">
+            <div>
+              <img src="img/trillo.png" alt="Project 5" class="project-img mb-3">
+              <h5 class="fw-semibold mb-2">Trillo</h5>
+              <p class="text-secondary mb-3">Trillo Project is a hotel and travel booking website I developed as a practice project to master complex layouts using Flexbox.
+                It features a modern interface with hotel listings, booking details, and a search function designed to resemble a real booking platform.
+                Built with HTML and CSS (Sass), this project focuses on creating a clean, responsive, and user-friendly design.</p>
+            </div>
+            <div class="project-links d-flex justify-content-center gap-2 mt-3">
+              <a href="https://trillo-defasa.vercel.app/" target="_blank" class="btn btn-sm btn-primary">Live Site</a>
+              <a href="https://github.com/Depasaa/Trillo-Defasa" target="_blank" class="btn btn-sm btn-outline-primary">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="col-md-4 d-flex">
+          <div class="project-card d-flex flex-column justify-content-between w-100">
+            <div>
+              <img src="img/nexter.png" alt="Project 6" class="project-img mb-3">
+              <h5 class="fw-semibold mb-2">Nexter</h5>
+              <p class="text-secondary mb-3">Nexter Project is a real estate-themed website I built to learn and apply CSS Grid in creating complex layouts.
+                It showcases luxury homes with images, descriptions, and agent information.
+                The project focuses on a modern design, clean grid structure, and an intuitive user experience across all screen sizes.
+                Developed using HTML and CSS (Sass), it demonstrates efficient and scalable front-end architecture.</p>
+            </div>
+            <div class="project-links d-flex justify-content-center gap-2 mt-3">
+              <a href="https://nexter-defasa.netlify.app/" target="_blank" class="btn btn-sm btn-primary">Live Site</a>
+              <a href="https://github.com/Depasaa/Nexter-Defasa" target="_blank" class="btn btn-sm btn-outline-primary">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+  
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact-section text-light position-relative">
+  
+    <!-- Video Background -->
+    <video autoplay muted loop playsinline class="contact-bg-video">
+        <source src="video/background video 4.mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay"></div>
+  
+    <div class="container-lg position-relative z-2 py-5">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Contact <span class="highlight">Me</span></h2>
+        <p class="text-secondary">Connect with me through the following platforms for collaboration or a casual chat.</p>
+      </div>
+  
+      <div class="row justify-content-center g-4">
+        <!-- GitHub -->
+        <div class="col-md-3 col-sm-6">
+          <a href="https://github.com/Depasaa" target="_blank" class="contact-card p-4 text-center text-decoration-none">
+            <i class="bi bi-github contact-icon mb-2"></i>
+            <h5 class="mb-1">GitHub</h5>
+            <p class="text-secondary mb-0">@Depasaa</p>
+          </a>
+        </div>
+  
+        <!-- Instagram -->
+        <div class="col-md-3 col-sm-6">
+          <a href="https://www.instagram.com/depasaa4" target="_blank" class="contact-card p-4 text-center text-decoration-none">
+            <i class="bi bi-instagram contact-icon mb-2"></i>
+            <h5 class="mb-1">Instagram</h5>
+            <p class="text-secondary mb-0">@depasaa4</p>
+          </a>
+        </div>
+  
+        <!-- Discord -->
+        <div class="col-md-3 col-sm-6">
+          <a href="https://bit.ly/TypeShitCommunity" target="_blank" class="contact-card p-4 text-center text-decoration-none">
+            <i class="bi bi-discord contact-icon mb-2"></i>
+            <h5 class="mb-1">Discord</h5>
+            <p class="text-secondary mb-0">Type Shit Community</p>
+          </a>
+        </div>
+  
+        <!-- TikTok -->
+        <div class="col-md-3 col-sm-6">
+          <a href="https://www.tiktok.com/@depasaa4" target="_blank" class="contact-card p-4 text-center text-decoration-none">
+            <i class="bi bi-tiktok contact-icon mb-2"></i>
+            <h5 class="mb-1">TikTok</h5>
+            <p class="text-secondary mb-0">@depasaa4</p>
+          </a>
+        </div>
+      </div>
+    </div>
+</section>
+
+  </main>
+  
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Script untuk update active navbar berdasarkan section yang terlihat -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+    function updateActiveNav() {
+      let current = "";
+      const scrollPosition = window.scrollY + 150; // Offset untuk navbar fixed + sedikit buffer
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        const sectionId = section.getAttribute("id");
+        
+        // Deteksi jika section sedang terlihat di viewport
+        if (scrollPosition >= sectionTop - 100 && scrollPosition < sectionTop + sectionHeight - 100) {
+          current = sectionId;
+        }
+      });
+
+      // Update active state pada semua nav links
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        const href = link.getAttribute("href");
+        if (href === `#${current}`) {
+          link.classList.add("active");
+        }
+      });
+    }
+
+    // Update saat scroll
+    window.addEventListener("scroll", updateActiveNav);
+    
+    // Update saat klik link navbar (untuk smooth scroll)
+    navLinks.forEach((link) => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href");
+        const targetSection = document.querySelector(targetId);
+        
+        if (targetSection) {
+          const offsetTop = targetSection.offsetTop - 80; // Offset untuk navbar fixed
+          window.scrollTo({
+            top: offsetTop,
+            behavior: "smooth"
+          });
+          
+          // Update active state setelah scroll
+          setTimeout(updateActiveNav, 100);
+        }
+      });
+    });
+
+    // Update saat pertama kali load
+    updateActiveNav();
+  });
+</script>
+</body>
+</html>
